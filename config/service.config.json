@@ -1,0 +1,8 @@
+{
+  "serviceUrl": "http://localhost:3000",
+  "defaultIndex": "NDVI",
+  "defaultCloudTolerance": 20,
+  "defaultStartDate": "2023-01-01",
+  "defaultEndDate": "2023-12-31"
+}
+

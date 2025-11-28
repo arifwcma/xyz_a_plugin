@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArcGIS defaultAssembly="SpectralIndexAddIn.dll" defaultNamespace="SpectralIndexAddIn" xmlns="http://schemas.esri.com/DADF/Registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.esri.com/DADF/Registry file:///C:/Program Files/ArcGIS/Pro/bin/ArcGIS.Desktop.Framework.xsd">
+  <AddInInfo id="{12345678-1234-1234-1234-123456789012}" version="1.0" desktopVersion="3.0">
+    <Name>Spectral Index Add-In</Name>
+    <Description>Add-in for managing XYZ tile layers from spectral index tile service</Description>
+    <Image>Images\AddInDesktop32.png</Image>
+    <Author>Your Name</Author>
+    <Date>2024</Date>
+  </AddInInfo>
+  <modules>
+    <insertModule id="SpectralIndexAddIn_Module" className="SpectralIndexAddIn.SpectralIndexAddIn" autoLoad="false" caption="Spectral Index Add-In">
+      <desktop>
+        <desktopModule className="SpectralIndexAddIn" />
+      </desktop>
+    </insertModule>
+  </modules>
+  <controls>
+    <insertControl id="SpectralIndexAddIn_SpectralIndexDockpane_ShowButton" className="SpectralIndexAddIn.SpectralIndexDockpane_ShowButton" caption="Spectral Index Manager" category="Add-In Controls" image="Images\AddInDesktop32.png" smallImage="Images\AddInDesktop16.png" tooltip="Show Spectral Index Manager" condition="esri_mapping_mapPane">
+      <tooltip heading="Spectral Index Manager">Open the Spectral Index Manager dock pane to add and manage XYZ tile layers</tooltip>
+    </insertControl>
+  </controls>
+  <dockPanes>
+    <insertDockPane id="SpectralIndexAddIn_SpectralIndexDockpane" className="SpectralIndexAddIn.SpectralIndexDockpane" caption="Spectral Index Manager" dock="group" dockWith="esri_core_contentsDockPane" state="dock" image="Images\AddInDesktop32.png" smallImage="Images\AddInDesktop16.png" width="350" height="500" showInitially="false">
+      <content className="SpectralIndexAddIn.SpectralIndexDockpaneView" />
+    </insertDockPane>
+  </dockPanes>
+</ArcGIS>
