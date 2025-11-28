@@ -1,0 +1,20 @@
+# IDE
+.idea/
+
+# Dependencies
+node_modules/
+
+# Environment
+.env
+.env.local
+
+# Sensitive files
+sensitive_resources/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
