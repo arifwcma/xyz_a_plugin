@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ArcGIS defaultAssembly="SpectralIndexAddIn.dll"
+        defaultNamespace="SpectralIndexAddIn"
+        xmlns="http://schemas.esri.com/DADF/Registry"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://schemas.esri.com/DADF/Registry file:///C:/Program%20Files/ArcGIS/Pro/bin/ArcGIS.Desktop.Framework.xsd">
+
+  <AddInInfo id="{fc8fd7df-874e-47d0-a79b-0d2fd03917f4}" version="1.0" desktopVersion="3.6.59527">
+    <Name>Spectral Index Add-In</Name>   
+    <Description>Add-in for managing XYZ tile layers from spectral index tile service</Description>
+    <Image>Images\AddinDesktop32.png</Image>
+    <Author>m.rahman</Author>
+    <Company>Acme</Company>
+    <Date>12/5/2025 10:14:29 AM</Date>
+    <Subject>Framework</Subject>
+  </AddInInfo>
+
+  <modules>
+    <insertModule id="SpectralIndexAddIn_Module" className="Module1" autoLoad="false" caption="Spectral Index Add-In">
+      <groups>
+        <group id="SpectralIndexAddIn_Group1" caption="Spectral Index" appearsOnAddInTab="true" keytip="SI">
+          <button refID="SpectralIndexAddIn_SpectralIndexDockpane_ShowButton"/>
+        </group>
+      </groups>
+      
+      <controls>
+        <button id="SpectralIndexAddIn_SpectralIndexDockpane_ShowButton" caption="Spectral Index Manager" className="SpectralIndexDockpane_ShowButton" loadOnClick="true" keytip="SIM" smallImage="Images\AddInDesktop16.png" largeImage="Images\AddInDesktop32.png">
+          <tooltip heading="Spectral Index Manager">Open the Spectral Index Manager dock pane to add and manage XYZ tile layers<disabledText /></tooltip>
+        </button>
+      </controls>
+      
+      <dockPanes>
+        <dockPane id="SpectralIndexAddIn_SpectralIndexDockpane" caption="Spectral Index Manager" className="SpectralIndexDockpane" dock="group" dockWith="esri_core_projectDockPane">
+          <content className="SpectralIndexDockpaneView" />
+        </dockPane>
+      </dockPanes>
+      
+    </insertModule>
+  </modules>
+</ArcGIS>
